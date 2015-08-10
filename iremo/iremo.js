@@ -1,14 +1,15 @@
 module.exports = function(RED) {
     function IremoNode(config) {
         RED.nodes.createNode(this,config);
+        this.host=config.host;
         var node = this;
-
+        console.log(this.host);
         this.on('input', function(msg) {
             var iRemocon = new require('iremocon');
-            var iremo = new iRemocon('192.168.1.90');
+            //var iremo = new iRemocon('192.168.1.90');
             //var ipadd= msg;
             //console.log(ipadd);
-            //var iremo = new iRemocon(msg.payload.name);
+            var iremo = new iRemocon(node.host);
             iremo.send('se', function(err, msg) {
                if (err) {
                  console.error(err.code, err.error, err.detail);
