@@ -1,7 +1,7 @@
 {
     "name"         : "node-red-contrib-iremocon",
     "version"      : "0.0.1",
-    "description"  : "A sample node for node-red",
+    "description"  : "iRemocon for node-red",
     "dependencies": {
       "iremocon":"git+https://github.com/hecomi/node-iRemocon.git#abe163010addfade76e6d237b9f11ed621f02350"
     },
