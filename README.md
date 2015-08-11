@@ -14,3 +14,8 @@ Run the following command in the root directory of your Node-RED install
 Usage
 -----
 
+Special Thanks
+-----
+
+thanks to @hecomi
+original code from https://github.com/hecomi/node-iRemocon
