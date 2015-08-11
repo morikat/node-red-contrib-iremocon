@@ -1,7 +1,7 @@
 <script type="text/javascript">
     RED.nodes.registerType('iremo',{
-        category: 'function',
-        color: '#a6bbcf',
+        category: 'IoT',
+        color: '#3FADB5',
         defaults: {
             host: {value:""}
         },
@@ -9,7 +9,7 @@
         outputs:1,
         icon: "light.png",
         label: function() {
-            return this.host||"iremo";
+            return 'iRemocon: ' + this.host||"iRemocon";
         }
     });
 </script>
