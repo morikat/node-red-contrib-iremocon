@@ -9,7 +9,7 @@
         outputs:1,
         icon: "light.png",
         label: function() {
-            return 'iRemocon: ' + this.host||"iRemocon";
+            return this.host != "" ? 'iRemocon: ' + this.host : "iRemocon";
         }
     });
 </script>
