@@ -20,5 +20,5 @@ module.exports = function(RED) {
             }); 
         });
     }
-    RED.nodes.registerType("iremocon",IRemoconNode);
+    RED.nodes.registerType("iRemocon",IRemoconNode);
 }
