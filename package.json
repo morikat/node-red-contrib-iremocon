@@ -8,7 +8,7 @@
     "keywords": [ "node-red" ],
     "node-red"     : {
         "nodes": {
-            "iremocon": "node-red-iremocon.js"
+            "iremocon": "node-red-contrib-iremocon.js"
         }
     }
 }
