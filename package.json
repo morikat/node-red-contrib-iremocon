@@ -6,6 +6,10 @@
       "name": "morikat",
       "email": "morika-t@outlook.com"
     },
+    "repository" : {
+      "type" : "git",
+      "url" : "https://github.com/morikat/node-red-contrib-iremocon.git"
+    },
     "dependencies": {
       "iremocon":"git+https://github.com/hecomi/node-iRemocon.git#abe163010addfade76e6d237b9f11ed621f02350"
     },
