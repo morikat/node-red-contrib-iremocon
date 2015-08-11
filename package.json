@@ -3,7 +3,7 @@
     "version"      : "0.0.1",
     "description"  : "A sample node for node-red",
     "dependencies": {
-      "iremocon":"git+https://github.com/hecomi/node-iRemocon.git#2ee003a2257813a8344b9fd056f14d4ca1239718"
+      "iremocon":"git+https://github.com/hecomi/node-iRemocon.git#abe163010addfade76e6d237b9f11ed621f02350"
     },
     "keywords": [ "node-red" ],
     "node-red"     : {
