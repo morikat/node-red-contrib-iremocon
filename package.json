@@ -10,5 +10,6 @@
         "nodes": {
             "iremocon": "node-red-contrib-iremocon.js"
         }
-    }
+    },
+    "license": "MIT"
 }
