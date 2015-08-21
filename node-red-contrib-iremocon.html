@@ -24,3 +24,33 @@
 <script type="text/x-red" data-help-name="iRemocon">
     <p>iRemocon node</p>
 </script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('iRemoconCtrl',{
+        category: 'IoT',
+        color: '#3FADB5',
+        defaults: {
+            host: {value:""},
+            signal: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "light.png",
+        label: function() {
+            return this.signal != "" ? 'iRemocon: ' + this.signal : "iRemocon";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="iRemoconCtrl">
+    <div class="form-row">
+        <label for="node-input-host"><i class="icon-tag"></i>host</label>
+        <input type="text" id="node-input-host" placeholder="host">
+        <label for="node-input-signal"><i class="icon-tag"></i>signal</label>
+        <input type="text" id="node-input-signal" placeholder="signal">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="iRemoconCtrl">
+    <p>iRemocon Ctrl node</p>
+</script>
