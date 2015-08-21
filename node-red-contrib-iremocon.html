@@ -24,3 +24,91 @@
 <script type="text/x-red" data-help-name="iRemocon">
     <p>iRemocon node</p>
 </script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('iRemoconCtrl',{
+        category: 'IoT',
+        color: '#3FADB5',
+        defaults: {
+            host: {value:""},
+            signal: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "light.png",
+        label: function() {
+            return this.signal != "" ? 'iRemocon: ' + this.signal : "iRemocon";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="iRemoconCtrl">
+    <div class="form-row">
+        <label for="node-input-host"><i class="icon-tag"></i>host</label>
+        <input type="text" id="node-input-host" placeholder="host">
+        <label for="node-input-signal"><i class="icon-tag"></i>signal</label>
+        <input type="text" id="node-input-signal" placeholder="signal">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="iRemoconCtrl">
+    <p>iRemocon Ctrl node</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('iRemoconSignalSelection',{
+        category: 'IoT',
+        color: '#3FADB5',
+        defaults: {
+            host: {value:""},
+            signal: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "light.png",
+        label: function() {
+            var label = ''
+            if(this.signal) {
+              switch(this.signal){
+                case '312':
+                  label = 'air-conditioner = auto';
+                  break;
+                case '313':
+                  label = 'air-conditioner = off';
+                  break;
+                case '350':
+                  label = 'light = on';
+                  break;
+                case '351':
+                  label = 'light = off';
+                  break;
+                default:
+                  label = 'default';
+                  break;
+              }
+              return 'iRemocon: ' + label;
+            }else{
+              return "iRemocon";
+            }
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="iRemoconSignalSelection">
+    <div class="form-row">
+        <label for="node-input-host"><i class="icon-tag"></i>host</label>
+        <input type="text" id="node-input-host" placeholder="host">
+        <label for="node-input-signal"><i class="icon-tag"></i>signal</label>
+        <select id="node-input-signal">
+          <option value=""></option>
+          <option value="350">light = on</option>
+          <option value="351">light = off</option>
+          <option value="312">air-conditioner = auto</option>
+          <option value="313">air-conditioner = off</option>
+        </select>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="iRemoconSignalSelection">
+    <p>iRemocon Signal Selection node</p>
+</script>
