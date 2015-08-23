@@ -7,7 +7,7 @@ module.exports = function(RED) {
         this.on('input', function(msg) {
             var iRemocon = new require('iremocon');
             var iremo = new iRemocon(node.host);
-            iremo.send('se', function(err, msg) {
+            iremo.send('se', function(err, msg2) {
                if (err) {
                  console.error(err.code, err.error, err.detail);
                  // e.g. 003 受信エラー 不正なリモコンデータを受信した
@@ -15,8 +15,8 @@ module.exports = function(RED) {
                }
                //console.log(msg);
                // e.g. ic;ok
-               var msg2 = { payload: msg };
-               node.send(msg2);
+               msg.payload=msg2;
+               node.send(msg);
             }); 
         });
     }
@@ -32,7 +32,7 @@ module.exports = function(RED) {
         this.on('input', function(msg) {
             var iRemocon = new require('iremocon');
             var iremo = new iRemocon(node.host);
-            iremo.is(node.signal, function(err, msg) {
+            iremo.is(node.signal, function(err, msg2) {
                if (err) {
                  console.error(err.code, err.error, err.detail);
                  // e.g. 003 受信エラー 不正なリモコンデータを受信した
@@ -40,8 +40,8 @@ module.exports = function(RED) {
                }
                //console.log(msg);
                // e.g. ic;ok
-               var msg2 = { payload: msg };
-               node.send(msg2);
+               msg.payload=msg2;
+               node.send(msg);
             });
         });
     }
@@ -57,7 +57,7 @@ module.exports = function(RED) {
         this.on('input', function(msg) {
             var iRemocon = new require('iremocon');
             var iremo = new iRemocon(node.host);
-            iremo.is(node.signal, function(err, msg) {
+            iremo.is(node.signal, function(err, msg2) {
                if (err) {
                  console.error(err.code, err.error, err.detail);
                  // e.g. 003 受信エラー 不正なリモコンデータを受信した
@@ -65,8 +65,8 @@ module.exports = function(RED) {
                }
                //console.log(msg);
                // e.g. ic;ok
-               var msg2 = { payload: msg };
-               node.send(msg2);
+               msg.payload=msg2;
+               node.send(msg);
             });
         });
     }
