@@ -1,6 +1,8 @@
 iRemocon for Node RED
 =====================
 
+[![NPM](https://nodei.co/npm/node-red-contrib-iremocon.png?compact=true)](https://nodei.co/npm/node-red-contrib-iremocon/)
+
 A <a href="http://nodered.org" target="_new">Node-RED</a> node to control a <a href="http://i-remocon.com/">iRemocon & iRemocon WiFi</a> 
 
 Install
